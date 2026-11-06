@@ -1,0 +1,139 @@
+{
+  "evaluation_phase": "Phase 3B: Updated Model Training & Chronological Evaluation",
+  "evaluation_regime": "One-step-ahead chronological evaluation on actual preceding-year lags",
+  "evaluation_distinction": "One-step-ahead evaluation provides the model with observed historical actuals for t-1 and t-2 at each annual step. In contrast, Stage 9 Phase 2 backtesting evaluated recursive multi-step forecasting where future lags were iteratively replaced by model predictions without intervening ground-truth corrections.",
+  "target_variable": "wpi_index_points",
+  "target_unit": "WPI index points",
+  "training_partition": {
+    "periods": [
+      "2014-15",
+      "2015-16",
+      "2016-17",
+      "2017-18",
+      "2018-19",
+      "2019-20",
+      "2020-21",
+      "2021-22",
+      "2022-23"
+    ],
+    "sample_count": 234,
+    "commodities_count": 26,
+    "start_year": 2014,
+    "end_year": 2023
+  },
+  "testing_partition": {
+    "periods": [
+      "2023-24",
+      "2024-25",
+      "2025-26"
+    ],
+    "sample_count": 78,
+    "commodities_count": 26,
+    "start_year": 2023,
+    "end_year": 2026
+  },
+  "best_overall_method": {
+    "name": "Na\u00efve Persistence Baseline",
+    "type": "Baseline",
+    "mae": 5.15,
+    "rmse": 7.88,
+    "mape": 3.09,
+    "justification": "Na\u00efve Persistence achieved the lowest prediction error on held-out test data because Indian wholesale input prices entered a prolonged macro plateau between FY 2022-23 and FY 2025-26, rendering zero-change persistence highly effective numerically for one-step-ahead forecasts."
+  },
+  "best_machine_learning_model": {
+    "name": "Ridge Regression (alpha=1.0)",
+    "type": "Machine Learning",
+    "mae": 12.56,
+    "rmse": 15.06,
+    "mape": 8.3,
+    "justification": "Ridge Regression achieved the lowest RMSE (15.07 pts) and MAE (12.85 pts) among all machine learning estimators, substantially outperforming tree ensembles (Random Forest RMSE 26.65, Gradient Boosting RMSE 27.08) by over 11.5 pts. L2 shrinkage regularizes collinear lagged features without overreacting to small sample fluctuations."
+  },
+  "overall_comparison": [
+    {
+      "Model / Baseline": "Na\u00efve Persistence Baseline",
+      "Model Type": "Baseline",
+      "MAE (WPI pts)": 5.15,
+      "RMSE (WPI pts)": 7.88,
+      "MAPE (%)": 3.09,
+      "Delta RMSE vs Na\u00efve": 0.0,
+      "Beats Na\u00efve Persistence": false
+    },
+    {
+      "Model / Baseline": "Rolling Mean Baseline (2-Year MA)",
+      "Model Type": "Baseline",
+      "MAE (WPI pts)": 7.64,
+      "RMSE (WPI pts)": 12.87,
+      "MAPE (%)": 4.35,
+      "Delta RMSE vs Na\u00efve": 4.99,
+      "Beats Na\u00efve Persistence": false
+    },
+    {
+      "Model / Baseline": "Ridge Regression (alpha=1.0)",
+      "Model Type": "Machine Learning",
+      "MAE (WPI pts)": 12.56,
+      "RMSE (WPI pts)": 15.06,
+      "MAPE (%)": 8.3,
+      "Delta RMSE vs Na\u00efve": 7.18,
+      "Beats Na\u00efve Persistence": false
+    },
+    {
+      "Model / Baseline": "Ridge Regression (alpha=10.0)",
+      "Model Type": "Machine Learning",
+      "MAE (WPI pts)": 12.85,
+      "RMSE (WPI pts)": 15.07,
+      "MAPE (%)": 8.54,
+      "Delta RMSE vs Na\u00efve": 7.19,
+      "Beats Na\u00efve Persistence": false
+    },
+    {
+      "Model / Baseline": "Drift Baseline (Linear Momentum)",
+      "Model Type": "Baseline",
+      "MAE (WPI pts)": 11.76,
+      "RMSE (WPI pts)": 19.74,
+      "MAPE (%)": 6.91,
+      "Delta RMSE vs Na\u00efve": 11.86,
+      "Beats Na\u00efve Persistence": false
+    },
+    {
+      "Model / Baseline": "Random Forest Regressor (depth=3)",
+      "Model Type": "Machine Learning",
+      "MAE (WPI pts)": 14.16,
+      "RMSE (WPI pts)": 26.65,
+      "MAPE (%)": 7.53,
+      "Delta RMSE vs Na\u00efve": 18.77,
+      "Beats Na\u00efve Persistence": false
+    },
+    {
+      "Model / Baseline": "Gradient Boosting Regressor (depth=2)",
+      "Model Type": "Machine Learning",
+      "MAE (WPI pts)": 15.59,
+      "RMSE (WPI pts)": 27.08,
+      "MAPE (%)": 8.61,
+      "Delta RMSE vs Na\u00efve": 19.2,
+      "Beats Na\u00efve Persistence": false
+    }
+  ],
+  "methodological_comparison_with_backtesting": {
+    "backtesting_scope": "Stage 9 Phase 2 recursive multi-step forecasts from 2022-23 baseline",
+    "phase_3b_scope": "Phase 3B one-step-ahead regression using actual observed preceding lags",
+    "persistence_comparison": {
+      "backtesting_mae": 8.96,
+      "phase_3b_mae": 5.15,
+      "explanation": "In one-step-ahead, Persistence updates each year to the true preceding year actual; in multi-year backtesting it froze at 2022-23."
+    },
+    "ridge_comparison": {
+      "backtesting_mae": 12.53,
+      "backtesting_rmse": 20.28,
+      "phase_3b_mae": 12.85,
+      "phase_3b_rmse": 15.07,
+      "explanation": "Ridge RMSE improved from 20.28 in recursive backtesting to 15.07 in one-step-ahead because error compounding was eliminated."
+    },
+    "drift_comparison": {
+      "backtesting_mae": 44.14,
+      "backtesting_rmse": 66.09,
+      "phase_3b_mae": 11.76,
+      "phase_3b_rmse": 19.74,
+      "explanation": "Drift exploded in recursive backtesting (RMSE 66.09) due to compounding post-COVID slope extrapolation, but was bounded in one-step-ahead."
+    }
+  }
+}

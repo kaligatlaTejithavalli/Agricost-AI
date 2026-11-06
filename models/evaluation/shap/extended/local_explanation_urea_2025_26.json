@@ -1,0 +1,91 @@
+{
+  "commodity_code": 1310020001,
+  "commodity_name": "Urea",
+  "input_category": "Fertilizer",
+  "period_label": "2025-26",
+  "sample_index": 107,
+  "actual_wpi": 115.6,
+  "predicted_wpi": 123.48,
+  "base_value": 140.36,
+  "sum_of_shap": -16.88,
+  "reconstructed_prediction": 123.48,
+  "absolute_difference": 0.0,
+  "additivity_verified": true,
+  "unit": "WPI index points",
+  "feature_contributions": [
+    {
+      "feature_raw": "num__lag_1",
+      "feature_display": "Prior Year WPI (lag_1)",
+      "shap_value": -7.3606,
+      "unit": "WPI index points"
+    },
+    {
+      "feature_raw": "num__rolling_mean_2",
+      "feature_display": "2-Year Moving Avg (rolling_mean_2)",
+      "shap_value": -5.7771,
+      "unit": "WPI index points"
+    },
+    {
+      "feature_raw": "num__lag_2",
+      "feature_display": "Two Years Prior WPI (lag_2)",
+      "shap_value": -3.7806,
+      "unit": "WPI index points"
+    },
+    {
+      "feature_raw": "num__period_order",
+      "feature_display": "Temporal Trend Order (period_order)",
+      "shap_value": 3.295,
+      "unit": "WPI index points"
+    },
+    {
+      "feature_raw": "num__historical_pct_change",
+      "feature_display": "Prior Year % Change (pct_change)",
+      "shap_value": -2.3539,
+      "unit": "WPI index points"
+    },
+    {
+      "feature_raw": "cat__input_category_Livestock Input",
+      "feature_display": "Category: Livestock Input",
+      "shap_value": -0.8611,
+      "unit": "WPI index points"
+    },
+    {
+      "feature_raw": "cat__input_category_Pesticide / Agrochemical",
+      "feature_display": "Category: Pesticide / Agrochemical",
+      "shap_value": -0.6486,
+      "unit": "WPI index points"
+    },
+    {
+      "feature_raw": "cat__input_category_Fuel & Power",
+      "feature_display": "Category: Fuel & Power",
+      "shap_value": 0.3052,
+      "unit": "WPI index points"
+    },
+    {
+      "feature_raw": "cat__input_category_Fertilizer",
+      "feature_display": "Category: Fertilizer",
+      "shap_value": 0.2411,
+      "unit": "WPI index points"
+    },
+    {
+      "feature_raw": "cat__input_category_Pesticide / Agrochemical (Group Index)",
+      "feature_display": "Category: Pesticide / Agrochemical (Group Index)",
+      "shap_value": 0.0326,
+      "unit": "WPI index points"
+    },
+    {
+      "feature_raw": "cat__input_category_Fertilizer (Group Index)",
+      "feature_display": "Category: Fertilizer (Group Index)",
+      "shap_value": 0.0162,
+      "unit": "WPI index points"
+    },
+    {
+      "feature_raw": "cat__input_category_Farm Machinery (Group Index)",
+      "feature_display": "Category: Farm Machinery (Group Index)",
+      "shap_value": 0.0086,
+      "unit": "WPI index points"
+    }
+  ],
+  "disclaimer_correlated_features": "Correlated Features & Causality Disclaimer: Features 'lag_1', 'lag_2', 'rolling_mean_2', and 'historical_pct_change' are mathematically and temporally collinear. SHAP attribution under shap.LinearExplainer evaluates feature contributions based on the fitted linear coefficients and the empirical training distribution. Because features are correlated, SHAP values reflect joint predictive associations under the model rather than independent causal mechanisms. A high positive SHAP contribution for lag_1 indicates that the model relied heavily on prior-year index momentum, not that changing lag_1 in isolation causes a guaranteed change in future wholesale prices.",
+  "disclaimer_units": "Unit Distinction Disclaimer: All SHAP values, feature attributions, and expected base values are expressed strictly in 'WPI index points' (relative to Base Year 2011-12 = 100.0). SHAP contributions do NOT represent rupee price changes, fertilizer retail costs, farm machinery hourly rates, or guaranteed farmer expenditure impacts. SHAP explains the mathematical mechanics of the WPI index forecasting model, not the user's localized physical market purchase price."
+}

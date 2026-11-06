@@ -1,0 +1,33 @@
+Model,Input Category,Observations,MAE (WPI pts),RMSE (WPI pts),MAPE (%),Directional Accuracy (%)
+Naïve Persistence Baseline,Farm Machinery,18,6.3583,8.557,4.3107,0.0
+Naïve Persistence Baseline,Farm Machinery (Group Index),3,7.5067,7.6713,5.1761,0.0
+Naïve Persistence Baseline,Fertilizer,21,8.5948,12.6353,6.1113,0.0
+Naïve Persistence Baseline,Fertilizer (Group Index),3,1.6067,1.6477,1.1227,0.0
+Naïve Persistence Baseline,Fuel & Power,9,12.7411,16.5088,7.9909,0.0
+Naïve Persistence Baseline,Livestock Input,12,6.2542,7.5046,3.0238,0.0
+Naïve Persistence Baseline,Pesticide / Agrochemical,9,16.6378,20.6995,7.7992,0.0
+Naïve Persistence Baseline,Pesticide / Agrochemical (Group Index),3,12.4567,12.5649,9.5304,0.0
+Stage 7 Saved Ridge Regression (alpha=10.0),Farm Machinery,18,8.8711,10.4276,6.5956,55.56
+Stage 7 Saved Ridge Regression (alpha=10.0),Farm Machinery (Group Index),3,6.72,6.9484,4.631,100.0
+Stage 7 Saved Ridge Regression (alpha=10.0),Fertilizer,21,12.3376,15.7035,8.5768,52.38
+Stage 7 Saved Ridge Regression (alpha=10.0),Fertilizer (Group Index),3,1.5767,1.8096,1.1022,66.67
+Stage 7 Saved Ridge Regression (alpha=10.0),Fuel & Power,9,5.9756,7.5392,3.8766,77.78
+Stage 7 Saved Ridge Regression (alpha=10.0),Livestock Input,12,9.0425,9.9586,4.3423,66.67
+Stage 7 Saved Ridge Regression (alpha=10.0),Pesticide / Agrochemical,9,37.3522,50.1838,15.5245,22.22
+Stage 7 Saved Ridge Regression (alpha=10.0),Pesticide / Agrochemical (Group Index),3,11.72,11.8099,8.9638,66.67
+Retrospective Ridge Regression (alpha=10.0),Farm Machinery,18,20.3265,24.2565,15.7181,88.89
+Retrospective Ridge Regression (alpha=10.0),Farm Machinery (Group Index),3,16.5277,18.627,11.3635,100.0
+Retrospective Ridge Regression (alpha=10.0),Fertilizer,21,26.3263,31.0332,19.0029,52.38
+Retrospective Ridge Regression (alpha=10.0),Fertilizer (Group Index),3,25.6653,27.1626,17.9081,0.0
+Retrospective Ridge Regression (alpha=10.0),Fuel & Power,9,35.847,37.9534,23.1795,22.22
+Retrospective Ridge Regression (alpha=10.0),Livestock Input,12,20.9526,23.3586,10.297,33.33
+Retrospective Ridge Regression (alpha=10.0),Pesticide / Agrochemical,9,37.4945,40.2776,22.317,11.11
+Retrospective Ridge Regression (alpha=10.0),Pesticide / Agrochemical (Group Index),3,35.8202,37.2538,27.4107,0.0
+Drift Baseline (Linear Momentum),Farm Machinery,18,10.5083,12.3541,7.7152,88.89
+Drift Baseline (Linear Momentum),Farm Machinery (Group Index),3,10.0933,11.6088,6.9369,100.0
+Drift Baseline (Linear Momentum),Fertilizer,21,37.8729,44.8638,25.3131,52.38
+Drift Baseline (Linear Momentum),Fertilizer (Group Index),3,32.0067,34.2004,22.3311,0.0
+Drift Baseline (Linear Momentum),Fuel & Power,9,98.9856,114.8846,63.5751,22.22
+Drift Baseline (Linear Momentum),Livestock Input,12,53.4075,71.4228,25.6357,33.33
+Drift Baseline (Linear Momentum),Pesticide / Agrochemical,9,77.2556,109.4586,32.0606,44.44
+Drift Baseline (Linear Momentum),Pesticide / Agrochemical (Group Index),3,35.0567,36.4504,26.8264,0.0

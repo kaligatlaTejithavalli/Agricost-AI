@@ -1,0 +1,81 @@
+{
+  "model_name": "Ridge Regression (alpha=10.0)",
+  "model_artifact": "models/trained/best_model.joblib",
+  "explainer_type": "shap.LinearExplainer",
+  "masker_type": "shap.maskers.Independent",
+  "background_dataset": "data/processed/train_data.csv",
+  "background_samples": 156,
+  "evaluation_dataset": "data/processed/test_data.csv",
+  "evaluation_samples": 78,
+  "num_features_explained": 12,
+  "target_variable": "wpi_index_points",
+  "target_unit": "WPI index points",
+  "base_value_expected": 125.4737,
+  "additivity_verified_all_samples": true,
+  "max_additivity_error": 2.842170943040401e-14,
+  "top_5_features_by_mean_abs_shap": [
+    {
+      "rank": 1,
+      "feature_display": "Prior Year WPI (lag_1)",
+      "mean_abs_shap": 6.888,
+      "mean_shap": 3.7637,
+      "std_shap": 9.2578,
+      "unit": "WPI index points",
+      "feature_raw": "num__lag_1"
+    },
+    {
+      "rank": 2,
+      "feature_display": "2-Year Moving Avg (rolling_mean_2)",
+      "mean_abs_shap": 5.7923,
+      "mean_shap": 2.7477,
+      "std_shap": 7.57,
+      "unit": "WPI index points",
+      "feature_raw": "num__rolling_mean_2"
+    },
+    {
+      "rank": 3,
+      "feature_display": "Prior Year % Change (pct_change)",
+      "mean_abs_shap": 4.3176,
+      "mean_shap": 2.4552,
+      "std_shap": 8.0058,
+      "unit": "WPI index points",
+      "feature_raw": "num__historical_pct_change"
+    },
+    {
+      "rank": 4,
+      "feature_display": "Two Years Prior WPI (lag_2)",
+      "mean_abs_shap": 4.2362,
+      "mean_shap": 1.6125,
+      "std_shap": 5.4937,
+      "unit": "WPI index points",
+      "feature_raw": "num__lag_2"
+    },
+    {
+      "rank": 5,
+      "feature_display": "Category: Livestock Input",
+      "mean_abs_shap": 1.9872,
+      "mean_shap": 0.0,
+      "std_shap": 2.7538,
+      "unit": "WPI index points",
+      "feature_raw": "cat__input_category_Livestock Input"
+    }
+  ],
+  "local_example_urea_2022_23": {
+    "commodity": "Urea",
+    "period": "2022-23",
+    "actual_wpi": 115.1,
+    "predicted_wpi": 115.76,
+    "base_value": 125.47,
+    "sum_of_shap": -9.71,
+    "reconstructed": 115.76,
+    "unit": "WPI index points"
+  },
+  "artifacts_saved": {
+    "global_importance_csv": "C:\\Users\\kteji\\AgriCost-AI\\models\\evaluation\\shap\\shap_global_importance.csv",
+    "summary_beeswarm_plot": "C:\\Users\\kteji\\AgriCost-AI\\models\\evaluation\\shap\\summary_beeswarm.png",
+    "summary_bar_plot": "C:\\Users\\kteji\\AgriCost-AI\\models\\evaluation\\shap\\summary_bar.png",
+    "local_explanation_json": "C:\\Users\\kteji\\AgriCost-AI\\models\\evaluation\\shap\\local_explanation_urea_2022_23.json",
+    "waterfall_plot": "C:\\Users\\kteji\\AgriCost-AI\\models\\evaluation\\shap\\waterfall_urea_2022_23.png",
+    "assumptions_markdown": "C:\\Users\\kteji\\AgriCost-AI\\models\\evaluation\\shap\\shap_assumptions_and_limitations.md"
+  }
+}

@@ -1,0 +1,9 @@
+category,observations_count,ridge_mae_pts,ridge_rmse_pts,ridge_mape_pct,ridge_dir_acc_pct,persistence_mae_pts,persistence_rmse_pts,persistence_mape_pct,drift_mae_pts,drift_rmse_pts,drift_mape_pct
+Fertilizer (Group Index),3,1.5778,1.8102,1.103,66.67,1.6056,1.6469,1.1219,32.0056,34.1989,22.3301
+Fuel & Power,9,5.975,7.5387,3.8762,77.78,12.7417,16.5091,7.9914,98.9861,114.885,63.5758
+Livestock Input,12,9.0426,9.9583,4.3424,66.67,6.2535,7.5044,3.0234,53.4076,71.424,25.6357
+Farm Machinery (Group Index),3,6.7189,6.9471,4.6303,100.0,7.5056,7.67,5.1754,10.0944,11.6104,6.9377
+Farm Machinery,18,8.8704,10.4269,6.5951,55.56,6.3583,8.5567,4.3108,10.5083,12.3541,7.7151
+Fertilizer,21,12.3379,15.7038,8.5769,52.38,8.5948,12.6354,6.1114,37.8726,44.8635,25.3129
+Pesticide / Agrochemical (Group Index),3,11.7189,11.8089,8.9629,66.67,12.4556,12.5638,9.5294,35.0556,36.449,26.8253
+Pesticide / Agrochemical,9,37.3524,50.1844,15.5243,22.22,16.638,20.6998,7.799,77.2546,109.4575,32.0598

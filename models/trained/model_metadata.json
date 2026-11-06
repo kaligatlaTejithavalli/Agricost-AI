@@ -1,0 +1,44 @@
+{
+  "best_model_name": "Ridge Regression (alpha=10.0)",
+  "best_model_mae": 12.76,
+  "best_model_rmse": 21.03,
+  "selected_ml_pipeline_name": "Ridge Regression (alpha=10.0)",
+  "selected_ml_pipeline_artifact": "models/trained/best_model.joblib",
+  "selected_ml_mae": 12.76,
+  "selected_ml_rmse": 21.03,
+  "best_overall_method": "Drift Baseline (Linear Momentum)",
+  "best_overall_method_type": "Baseline",
+  "best_overall_mae": 11.92,
+  "best_overall_rmse": 20.49,
+  "model_selection_clarification": "Drift Baseline (Linear Momentum) achieved the lowest prediction error overall (RMSE 20.49, MAE 11.92). Ridge Regression (alpha=10.0) is the top-performing machine learning model (RMSE 21.03, MAE 12.76) and outperformed the Naive Persistence baseline (RMSE 22.02). best_model.joblib contains this selected ML pipeline for feature attribution and deployment. Drift Baseline predictions are preserved in evaluation tables for benchmark comparison.",
+  "target_variable": "wpi_index_points",
+  "target_unit": "WPI index points",
+  "features_numerical": [
+    "lag_1",
+    "lag_2",
+    "historical_pct_change",
+    "rolling_mean_2",
+    "period_order"
+  ],
+  "features_categorical": [
+    "input_category"
+  ],
+  "training_periods": [
+    "2014-15",
+    "2015-16",
+    "2016-17",
+    "2017-18",
+    "2018-19",
+    "2019-20"
+  ],
+  "training_samples": 156,
+  "testing_periods": [
+    "2020-21",
+    "2021-22",
+    "2022-23"
+  ],
+  "testing_samples": 78,
+  "commodities_count": 26,
+  "evaluation_type": "One-step-ahead historical evaluation on held-out test split",
+  "evaluation_limitation_note": "One-step-ahead test evaluation uses actual historical lags from the preceding year. Multi-year forward recursive forecasts compound forecast errors across future horizons."
+}

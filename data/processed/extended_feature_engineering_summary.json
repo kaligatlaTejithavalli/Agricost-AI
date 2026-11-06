@@ -1,0 +1,36 @@
+{
+  "phase": "Phase 3A Extended Historical Data Integration",
+  "total_commodities": 26,
+  "raw_timeseries_rows": 364,
+  "features_created": [
+    "lag_1",
+    "lag_2",
+    "historical_pct_change",
+    "rolling_mean_2",
+    "period_order"
+  ],
+  "dropped_initial_lag_rows": 52,
+  "usable_rows": 312,
+  "usable_observations_per_commodity": 12,
+  "first_financial_year": "2012-13",
+  "last_financial_year": "2025-26",
+  "usable_periods": [
+    "2014-15",
+    "2015-16",
+    "2016-17",
+    "2017-18",
+    "2018-19",
+    "2019-20",
+    "2020-21",
+    "2021-22",
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "usable_periods_count": 12,
+  "target_variable": "wpi_index_points",
+  "target_unit_label": "WPI index points",
+  "temporal_leakage_prevented": true,
+  "zero_cross_commodity_contamination": true
+}

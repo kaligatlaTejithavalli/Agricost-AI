@@ -1,0 +1,57 @@
+input_category,sample_count,Model,MAE (WPI pts),RMSE (WPI pts),MAPE (%)
+Farm Machinery,18,Naïve Persistence Baseline,2.98,3.96,2.11
+Farm Machinery,18,Drift Baseline (Linear Momentum),3.03,3.72,2.27
+Farm Machinery,18,Rolling Mean Baseline (2-Year MA),5.0,6.48,3.45
+Farm Machinery,18,Ridge Regression (alpha=10.0),10.26,10.99,7.84
+Farm Machinery,18,Ridge Regression (alpha=1.0),8.83,9.87,6.86
+Farm Machinery,18,Random Forest Regressor (depth=3),5.21,6.26,3.76
+Farm Machinery,18,Gradient Boosting Regressor (depth=2),6.33,7.78,4.81
+Farm Machinery (Group Index),3,Naïve Persistence Baseline,2.97,3.53,2.07
+Farm Machinery (Group Index),3,Drift Baseline (Linear Momentum),2.73,2.78,1.89
+Farm Machinery (Group Index),3,Rolling Mean Baseline (2-Year MA),5.82,6.6,4.05
+Farm Machinery (Group Index),3,Ridge Regression (alpha=10.0),9.03,9.31,6.23
+Farm Machinery (Group Index),3,Ridge Regression (alpha=1.0),8.17,8.45,5.63
+Farm Machinery (Group Index),3,Random Forest Regressor (depth=3),3.35,3.84,2.3
+Farm Machinery (Group Index),3,Gradient Boosting Regressor (depth=2),2.68,3.17,1.84
+Fertilizer,21,Naïve Persistence Baseline,4.87,7.78,3.31
+Fertilizer,21,Drift Baseline (Linear Momentum),11.44,16.83,7.86
+Fertilizer,21,Rolling Mean Baseline (2-Year MA),6.26,8.61,4.11
+Fertilizer,21,Ridge Regression (alpha=10.0),12.31,15.02,8.86
+Fertilizer,21,Ridge Regression (alpha=1.0),12.27,15.25,8.94
+Fertilizer,21,Random Forest Regressor (depth=3),12.79,15.6,8.47
+Fertilizer,21,Gradient Boosting Regressor (depth=2),15.39,17.91,10.24
+Fertilizer (Group Index),3,Naïve Persistence Baseline,0.96,1.21,0.67
+Fertilizer (Group Index),3,Drift Baseline (Linear Momentum),6.59,10.02,4.62
+Fertilizer (Group Index),3,Rolling Mean Baseline (2-Year MA),2.34,3.29,1.64
+Fertilizer (Group Index),3,Ridge Regression (alpha=10.0),12.31,12.45,8.6
+Fertilizer (Group Index),3,Ridge Regression (alpha=1.0),11.87,12.03,8.29
+Fertilizer (Group Index),3,Random Forest Regressor (depth=3),5.68,6.19,3.97
+Fertilizer (Group Index),3,Gradient Boosting Regressor (depth=2),6.11,6.12,4.27
+Fuel & Power,9,Naïve Persistence Baseline,6.0,7.91,3.75
+Fuel & Power,9,Drift Baseline (Linear Momentum),19.27,32.97,11.86
+Fuel & Power,9,Rolling Mean Baseline (2-Year MA),9.69,10.96,6.19
+Fuel & Power,9,Ridge Regression (alpha=10.0),16.88,18.73,10.8
+Fuel & Power,9,Ridge Regression (alpha=1.0),14.64,16.86,9.36
+Fuel & Power,9,Random Forest Regressor (depth=3),14.74,16.83,9.38
+Fuel & Power,9,Gradient Boosting Regressor (depth=2),21.01,25.22,13.24
+Livestock Input,12,Naïve Persistence Baseline,7.28,9.11,3.55
+Livestock Input,12,Drift Baseline (Linear Momentum),18.18,24.3,8.63
+Livestock Input,12,Rolling Mean Baseline (2-Year MA),9.23,11.45,4.41
+Livestock Input,12,Ridge Regression (alpha=10.0),11.98,14.03,5.89
+Livestock Input,12,Ridge Regression (alpha=1.0),12.26,14.12,6.03
+Livestock Input,12,Random Forest Regressor (depth=3),8.86,10.47,4.38
+Livestock Input,12,Gradient Boosting Regressor (depth=2),8.36,9.6,4.07
+Pesticide / Agrochemical,9,Naïve Persistence Baseline,8.42,13.15,3.97
+Pesticide / Agrochemical,9,Drift Baseline (Linear Momentum),18.65,26.74,8.49
+Pesticide / Agrochemical,9,Rolling Mean Baseline (2-Year MA),15.26,29.21,5.99
+Pesticide / Agrochemical,9,Ridge Regression (alpha=10.0),16.91,20.37,10.04
+Pesticide / Agrochemical,9,Ridge Regression (alpha=1.0),19.78,22.79,11.41
+Pesticide / Agrochemical,9,Random Forest Regressor (depth=3),49.08,70.82,17.76
+Pesticide / Agrochemical,9,Gradient Boosting Regressor (depth=2),47.57,68.29,17.46
+Pesticide / Agrochemical (Group Index),3,Naïve Persistence Baseline,5.68,6.69,4.31
+Pesticide / Agrochemical (Group Index),3,Drift Baseline (Linear Momentum),11.64,13.72,8.84
+Pesticide / Agrochemical (Group Index),3,Rolling Mean Baseline (2-Year MA),4.89,6.09,3.76
+Pesticide / Agrochemical (Group Index),3,Ridge Regression (alpha=10.0),15.74,16.47,11.99
+Pesticide / Agrochemical (Group Index),3,Ridge Regression (alpha=1.0),15.47,16.17,11.79
+Pesticide / Agrochemical (Group Index),3,Random Forest Regressor (depth=3),11.36,11.78,8.66
+Pesticide / Agrochemical (Group Index),3,Gradient Boosting Regressor (depth=2),11.74,12.27,8.95

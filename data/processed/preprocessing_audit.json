@@ -1,0 +1,33 @@
+{
+  "raw_total_records": 869,
+  "raw_columns_count": 27,
+  "duplicate_commodity_codes": 0,
+  "duplicate_commodity_names": 0,
+  "unpopulated_columns": [
+    "INDEX2011",
+    "INDEX20112012",
+    "INDEX2012"
+  ],
+  "unpopulated_missing_count": 2607,
+  "retained_input_commodities": 26,
+  "excluded_commodities_count": 843,
+  "categories_breakdown": {
+    "Fertilizer": 7,
+    "Farm Machinery": 6,
+    "Livestock Input": 4,
+    "Fuel & Power": 3,
+    "Pesticide / Agrochemical": 3,
+    "Pesticide / Agrochemical (Group Index)": 1,
+    "Farm Machinery (Group Index)": 1,
+    "Fertilizer (Group Index)": 1
+  },
+  "fy_periods_count": 11,
+  "fy_valid_observations": 286,
+  "cy_periods_count": 10,
+  "cy_valid_observations": 260,
+  "min_wpi_value_fy": 72.4,
+  "max_wpi_value_fy": 305.6,
+  "mean_wpi_value_fy": 129.83,
+  "target_unit_label": "WPI index points",
+  "dataset_source": "Office of the Economic Adviser, DPIIT, Ministry of Commerce & Industry, Base 2011-12=100"
+}

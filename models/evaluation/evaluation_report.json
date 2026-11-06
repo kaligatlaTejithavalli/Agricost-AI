@@ -1,0 +1,112 @@
+{
+  "target_variable": "wpi_index_points",
+  "target_unit": "WPI index points",
+  "best_overall_method": {
+    "name": "Drift Baseline (Linear Momentum)",
+    "method_type": "Baseline",
+    "rmse": 20.49,
+    "mae": 11.92
+  },
+  "selected_ml_pipeline": {
+    "name": "Ridge Regression (alpha=10.0)",
+    "artifact": "models/trained/best_model.joblib",
+    "rmse": 21.03,
+    "mae": 12.76,
+    "beats_naive_persistence": true
+  },
+  "drift_baseline_preserved": true,
+  "overall_comparison": [
+    {
+      "Model / Baseline": "Drift Baseline (Linear Momentum)",
+      "Model Type": "Baseline",
+      "MAE (WPI points)": 11.92,
+      "RMSE (WPI points)": 20.49,
+      "Delta RMSE vs Naive": -1.53,
+      "Beats Naive Persistence": true
+    },
+    {
+      "Model / Baseline": "Ridge Regression (alpha=10.0)",
+      "Model Type": "Machine Learning",
+      "MAE (WPI points)": 12.76,
+      "RMSE (WPI points)": 21.03,
+      "Delta RMSE vs Naive": -0.99,
+      "Beats Naive Persistence": true
+    },
+    {
+      "Model / Baseline": "Naive Persistence (y_t = lag_1)",
+      "Model Type": "Baseline",
+      "MAE (WPI points)": 14.01,
+      "RMSE (WPI points)": 22.02,
+      "Delta RMSE vs Naive": 0.0,
+      "Beats Naive Persistence": false
+    },
+    {
+      "Model / Baseline": "Random Forest (depth=3)",
+      "Model Type": "Machine Learning",
+      "MAE (WPI points)": 13.88,
+      "RMSE (WPI points)": 23.67,
+      "Delta RMSE vs Naive": 1.65,
+      "Beats Naive Persistence": false
+    },
+    {
+      "Model / Baseline": "Gradient Boosting (depth=2)",
+      "Model Type": "Machine Learning",
+      "MAE (WPI points)": 14.72,
+      "RMSE (WPI points)": 25.0,
+      "Delta RMSE vs Naive": 2.98,
+      "Beats Naive Persistence": false
+    },
+    {
+      "Model / Baseline": "Rolling Mean Baseline (2-Year MA)",
+      "Model Type": "Baseline",
+      "MAE (WPI points)": 16.5,
+      "RMSE (WPI points)": 25.83,
+      "Delta RMSE vs Naive": 3.81,
+      "Beats Naive Persistence": false
+    }
+  ],
+  "best_model": {
+    "best_model_name": "Ridge Regression (alpha=10.0)",
+    "best_model_mae": 12.76,
+    "best_model_rmse": 21.03,
+    "selected_ml_pipeline_name": "Ridge Regression (alpha=10.0)",
+    "selected_ml_pipeline_artifact": "models/trained/best_model.joblib",
+    "selected_ml_mae": 12.76,
+    "selected_ml_rmse": 21.03,
+    "best_overall_method": "Drift Baseline (Linear Momentum)",
+    "best_overall_method_type": "Baseline",
+    "best_overall_mae": 11.92,
+    "best_overall_rmse": 20.49,
+    "model_selection_clarification": "Drift Baseline (Linear Momentum) achieved the lowest prediction error overall (RMSE 20.49, MAE 11.92). Ridge Regression (alpha=10.0) is the top-performing machine learning model (RMSE 21.03, MAE 12.76) and outperformed the Naive Persistence baseline (RMSE 22.02). best_model.joblib contains this selected ML pipeline for feature attribution and deployment. Drift Baseline predictions are preserved in evaluation tables for benchmark comparison.",
+    "target_variable": "wpi_index_points",
+    "target_unit": "WPI index points",
+    "features_numerical": [
+      "lag_1",
+      "lag_2",
+      "historical_pct_change",
+      "rolling_mean_2",
+      "period_order"
+    ],
+    "features_categorical": [
+      "input_category"
+    ],
+    "training_periods": [
+      "2014-15",
+      "2015-16",
+      "2016-17",
+      "2017-18",
+      "2018-19",
+      "2019-20"
+    ],
+    "training_samples": 156,
+    "testing_periods": [
+      "2020-21",
+      "2021-22",
+      "2022-23"
+    ],
+    "testing_samples": 78,
+    "commodities_count": 26,
+    "evaluation_type": "One-step-ahead historical evaluation on held-out test split",
+    "evaluation_limitation_note": "One-step-ahead test evaluation uses actual historical lags from the preceding year. Multi-year forward recursive forecasts compound forecast errors across future horizons."
+  }
+}

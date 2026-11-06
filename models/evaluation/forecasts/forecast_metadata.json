@@ -1,0 +1,25 @@
+{
+  "model_name": "Ridge Regression (alpha=10.0)",
+  "model_artifact": "models/trained/best_model.joblib",
+  "total_commodities_supported": 26,
+  "latest_observed_financial_year": "2022-23",
+  "latest_observed_order": 10,
+  "forecast_horizons_generated": [
+    1,
+    2,
+    3
+  ],
+  "forecast_periods_generated": [
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "total_forecast_records": 78,
+  "target_unit": "WPI index points",
+  "base_year": "Base Year 2011-12 = 100.0",
+  "artifacts_saved": {
+    "all_forecasts_csv": "C:\\Users\\kteji\\AgriCost-AI\\models\\evaluation\\forecasts\\commodity_forecasts_all.csv",
+    "examples_summary_json": "C:\\Users\\kteji\\AgriCost-AI\\models\\evaluation\\forecasts\\forecasts_summary.json",
+    "methodology_doc": "C:\\Users\\kteji\\AgriCost-AI\\models\\evaluation\\forecasts\\forecast_limitations_and_methodology.md"
+  }
+}

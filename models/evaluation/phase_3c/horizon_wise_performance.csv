@@ -1,0 +1,25 @@
+Model / Baseline,Model Type,Horizon,Financial Year,MAE (WPI pts),RMSE (WPI pts),MAPE (%),Directional Accuracy (%)
+Naïve Persistence Baseline,Baseline,1,2023-24,8.0885,11.6491,4.8301,0.0
+Naïve Persistence Baseline,Baseline,2,2024-25,8.7269,12.3596,5.4313,0.0
+Naïve Persistence Baseline,Baseline,3,2025-26,10.0735,13.607,6.347,0.0
+Rolling Mean Baseline (2-Year MA),Baseline,1,2023-24,12.2558,19.9553,6.59,50.0
+Rolling Mean Baseline (2-Year MA),Baseline,2,2024-25,9.424,14.5384,5.5138,50.0
+Rolling Mean Baseline (2-Year MA),Baseline,3,2025-26,11.8547,17.2193,6.8299,46.15
+Stage 7 Saved Ridge Regression (alpha=10.0),Machine Learning,1,2023-24,10.1173,16.5891,5.788,50.0
+Stage 7 Saved Ridge Regression (alpha=10.0),Machine Learning,2,2024-25,12.0869,19.8411,7.1465,57.69
+Stage 7 Saved Ridge Regression (alpha=10.0),Machine Learning,3,2025-26,15.3835,23.7663,8.9747,65.38
+Retrospective Ridge Regression (alpha=1.0),Machine Learning,1,2023-24,15.6426,19.5573,10.1801,46.15
+Retrospective Ridge Regression (alpha=1.0),Machine Learning,2,2024-25,25.9796,29.1745,17.3507,46.15
+Retrospective Ridge Regression (alpha=1.0),Machine Learning,3,2025-26,34.4438,37.8139,23.3553,50.0
+Retrospective Ridge Regression (alpha=10.0),Machine Learning,1,2023-24,15.843,19.3486,10.35,46.15
+Retrospective Ridge Regression (alpha=10.0),Machine Learning,2,2024-25,26.9825,29.4718,18.0653,46.15
+Retrospective Ridge Regression (alpha=10.0),Machine Learning,3,2025-26,36.5695,39.2371,24.8565,50.0
+Random Forest Regressor (depth=3),Machine Learning,1,2023-24,14.4834,26.8647,7.9264,42.31
+Random Forest Regressor (depth=3),Machine Learning,2,2024-25,22.3607,32.4449,13.1678,50.0
+Random Forest Regressor (depth=3),Machine Learning,3,2025-26,29.4571,38.6436,18.1027,53.85
+Gradient Boosting Regressor (depth=2),Machine Learning,1,2023-24,15.9582,25.382,9.1552,38.46
+Gradient Boosting Regressor (depth=2),Machine Learning,2,2024-25,24.0645,34.7495,14.4479,50.0
+Gradient Boosting Regressor (depth=2),Machine Learning,3,2025-26,29.9584,38.8309,18.9564,53.85
+Drift Baseline (Linear Momentum),Baseline,1,2023-24,23.1154,31.0011,13.6479,50.0
+Drift Baseline (Linear Momentum),Baseline,2,2024-25,44.1346,61.1155,25.703,50.0
+Drift Baseline (Linear Momentum),Baseline,3,2025-26,65.1735,91.703,37.8446,53.85

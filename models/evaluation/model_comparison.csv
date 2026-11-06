@@ -1,0 +1,7 @@
+Model / Baseline,Model Type,MAE (WPI points),RMSE (WPI points),Delta RMSE vs Naive,Beats Naive Persistence
+Drift Baseline (Linear Momentum),Baseline,11.92,20.49,-1.53,True
+Ridge Regression (alpha=10.0),Machine Learning,12.76,21.03,-0.99,True
+Naive Persistence (y_t = lag_1),Baseline,14.01,22.02,0.0,False
+Random Forest (depth=3),Machine Learning,13.88,23.67,1.65,False
+Gradient Boosting (depth=2),Machine Learning,14.72,25.0,2.98,False
+Rolling Mean Baseline (2-Year MA),Baseline,16.5,25.83,3.81,False

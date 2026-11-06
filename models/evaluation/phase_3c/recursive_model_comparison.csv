@@ -1,0 +1,9 @@
+Model / Baseline,Model Type,Overall MAE (WPI pts),Overall RMSE (WPI pts),Overall MAPE (%),Directional Accuracy (%),Delta RMSE vs Naïve,Beats Naïve Persistence
+Naïve Persistence Baseline,Baseline,8.9629,12.5647,5.5361,0.0,0.0,False
+Rolling Mean Baseline (2-Year MA),Baseline,11.1782,17.3789,6.3112,48.72,4.81,False
+Stage 7 Saved Ridge Regression (alpha=10.0),Machine Learning,12.5292,20.2789,7.3031,57.69,7.71,False
+Retrospective Ridge Regression (alpha=1.0),Machine Learning,25.3553,29.7967,16.962,47.44,17.23,False
+Retrospective Ridge Regression (alpha=10.0),Machine Learning,26.465,30.4549,17.7572,47.44,17.89,False
+Random Forest Regressor (depth=3),Machine Learning,22.1004,33.0036,13.0656,48.72,20.44,False
+Gradient Boosting Regressor (depth=2),Machine Learning,23.327,33.4645,14.1865,47.44,20.9,False
+Drift Baseline (Linear Momentum),Baseline,44.1412,66.0949,25.7318,51.28,53.53,False

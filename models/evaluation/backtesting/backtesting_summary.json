@@ -1,0 +1,217 @@
+{
+  "evaluation_scope": "Out-of-sample backtesting of Stage 7 forecasts against official DPIIT observations",
+  "data_provenance": {
+    "source": "Office of the Economic Adviser, DPIIT, Ministry of Commerce & Industry",
+    "base_year": "2011-12 = 100.0",
+    "staged_file": "fin_year_index.xls",
+    "forecasts_file": "commodity_forecasts_all.csv"
+  },
+  "total_pairs_evaluated": 78,
+  "commodities_count": 26,
+  "horizons_count": 3,
+  "evaluation_periods": [
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "target_unit": "WPI index points",
+  "overall_performance": {
+    "ridge_regression": {
+      "mae": 12.5291,
+      "rmse": 20.279,
+      "mape": 7.3029,
+      "directional_accuracy_pct": 57.69
+    },
+    "persistence_baseline": {
+      "mae": 8.9628,
+      "rmse": 12.5646,
+      "mape": 5.536,
+      "directional_accuracy_pct": 0.0
+    },
+    "drift_baseline": {
+      "mae": 44.141,
+      "rmse": 66.0949,
+      "mape": 25.7317,
+      "directional_accuracy_pct": 51.28
+    }
+  },
+  "horizon_breakdown": {
+    "1": {
+      "forecast_period": "2023-24",
+      "observations_count": 26,
+      "ridge_regression": {
+        "mae": 10.1173,
+        "rmse": 16.5891,
+        "mape": 5.788,
+        "directional_accuracy_pct": 50.0
+      },
+      "persistence_baseline": {
+        "mae": 8.0885,
+        "rmse": 11.6491,
+        "mape": 4.8301,
+        "directional_accuracy_pct": 0.0
+      },
+      "drift_baseline": {
+        "mae": 23.1154,
+        "rmse": 31.0011,
+        "mape": 13.6479,
+        "directional_accuracy_pct": 50.0
+      }
+    },
+    "2": {
+      "forecast_period": "2024-25",
+      "observations_count": 26,
+      "ridge_regression": {
+        "mae": 12.0869,
+        "rmse": 19.8411,
+        "mape": 7.1465,
+        "directional_accuracy_pct": 57.69
+      },
+      "persistence_baseline": {
+        "mae": 8.7269,
+        "rmse": 12.3596,
+        "mape": 5.4313,
+        "directional_accuracy_pct": 0.0
+      },
+      "drift_baseline": {
+        "mae": 44.1346,
+        "rmse": 61.1155,
+        "mape": 25.703,
+        "directional_accuracy_pct": 50.0
+      }
+    },
+    "3": {
+      "forecast_period": "2025-26",
+      "observations_count": 26,
+      "ridge_regression": {
+        "mae": 15.383,
+        "rmse": 23.7664,
+        "mape": 8.9742,
+        "directional_accuracy_pct": 65.38
+      },
+      "persistence_baseline": {
+        "mae": 10.0731,
+        "rmse": 13.6069,
+        "mape": 6.3467,
+        "directional_accuracy_pct": 0.0
+      },
+      "drift_baseline": {
+        "mae": 65.1731,
+        "rmse": 91.7029,
+        "mape": 37.8442,
+        "directional_accuracy_pct": 53.85
+      }
+    }
+  },
+  "best_forecasts": [
+    {
+      "commodity_code": 1310020002,
+      "commodity_name": "Di ammonium phosphate",
+      "forecast_period": "2025-26",
+      "forecast_horizon": 3,
+      "actual_wpi": 155.4,
+      "forecast_wpi": 155.43,
+      "abs_error_ridge": 0.03,
+      "pct_error_ridge": 0.0193
+    },
+    {
+      "commodity_code": 1310040002,
+      "commodity_name": "Agro chemical formulation",
+      "forecast_period": "2023-24",
+      "forecast_horizon": 1,
+      "actual_wpi": 172.6,
+      "forecast_wpi": 172.83,
+      "abs_error_ridge": 0.23,
+      "pct_error_ridge": 0.1333
+    },
+    {
+      "commodity_code": 1310020004,
+      "commodity_name": "Nitrogenous fertilizer, others",
+      "forecast_period": "2024-25",
+      "forecast_horizon": 2,
+      "actual_wpi": 156.0,
+      "forecast_wpi": 155.5,
+      "abs_error_ridge": 0.5,
+      "pct_error_ridge": 0.3205
+    },
+    {
+      "commodity_code": 1310020000,
+      "commodity_name": "b. Manufacture of fertilizers and nitrogen compounds",
+      "forecast_period": "2024-25",
+      "forecast_horizon": 2,
+      "actual_wpi": 143.1,
+      "forecast_wpi": 143.98,
+      "abs_error_ridge": 0.88,
+      "pct_error_ridge": 0.615
+    },
+    {
+      "commodity_code": 1310020000,
+      "commodity_name": "b. Manufacture of fertilizers and nitrogen compounds",
+      "forecast_period": "2025-26",
+      "forecast_horizon": 3,
+      "actual_wpi": 143.6833333333333,
+      "forecast_wpi": 142.66,
+      "abs_error_ridge": 1.0233,
+      "pct_error_ridge": 0.7122
+    }
+  ],
+  "worst_forecasts": [
+    {
+      "commodity_code": 1310040003,
+      "commodity_name": "Fungicide, liquid",
+      "forecast_period": "2025-26",
+      "forecast_horizon": 3,
+      "actual_wpi": 333.6833333333333,
+      "forecast_wpi": 237.11,
+      "abs_error_ridge": 96.5733,
+      "pct_error_ridge": 28.9416
+    },
+    {
+      "commodity_code": 1310020003,
+      "commodity_name": "Ammonium sulphate",
+      "forecast_period": "2025-26",
+      "forecast_horizon": 3,
+      "actual_wpi": 117.59999999999998,
+      "forecast_wpi": 149.52,
+      "abs_error_ridge": 31.92,
+      "pct_error_ridge": 27.1429
+    },
+    {
+      "commodity_code": 1310040003,
+      "commodity_name": "Fungicide, liquid",
+      "forecast_period": "2024-25",
+      "forecast_horizon": 2,
+      "actual_wpi": 338.2,
+      "forecast_wpi": 254.5,
+      "abs_error_ridge": 83.7,
+      "pct_error_ridge": 24.7487
+    },
+    {
+      "commodity_code": 1310020003,
+      "commodity_name": "Ammonium sulphate",
+      "forecast_period": "2023-24",
+      "forecast_horizon": 1,
+      "actual_wpi": 122.8,
+      "forecast_wpi": 152.39,
+      "abs_error_ridge": 29.59,
+      "pct_error_ridge": 24.0961
+    },
+    {
+      "commodity_code": 1310020003,
+      "commodity_name": "Ammonium sulphate",
+      "forecast_period": "2024-25",
+      "forecast_horizon": 2,
+      "actual_wpi": 123.4,
+      "forecast_wpi": 150.85,
+      "abs_error_ridge": 27.45,
+      "pct_error_ridge": 22.2447
+    }
+  ],
+  "baseline_comparison_conclusion": {
+    "beat_drift_baseline": true,
+    "drift_rmse_ratio": 3.26,
+    "beat_persistence_point_error": false,
+    "directional_accuracy_advantage": 57.69,
+    "persistence_notes": "Persistence achieved lower overall point error due to post-2022 market plateau, but yielded 0% directional accuracy. Ridge achieved 57.7% directional accuracy and outperformed persistence across dynamic sectors (Fuel & Power, DAP, Farm Equipment)."
+  }
+}

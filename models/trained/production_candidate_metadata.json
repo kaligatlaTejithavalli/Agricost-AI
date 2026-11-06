@@ -1,0 +1,39 @@
+{
+  "model_name": "Ridge Regression (alpha=10.0) [Production Candidate Extended]",
+  "artifact_path": "models\\trained\\production_candidate_extended.joblib",
+  "dataset": "data/processed/agricultural_inputs_features_extended.csv",
+  "training_observations": 312,
+  "commodities_count": 26,
+  "first_training_period": "2014-15",
+  "last_training_period": "2025-26",
+  "periods_covered": [
+    "2014-15",
+    "2015-16",
+    "2016-17",
+    "2017-18",
+    "2018-19",
+    "2019-20",
+    "2020-21",
+    "2021-22",
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "in_sample_mae": 7.4,
+  "in_sample_rmse": 12.76,
+  "in_sample_mape": 5.14,
+  "target_variable": "wpi_index_points",
+  "target_unit": "WPI index points",
+  "features_numerical": [
+    "lag_1",
+    "lag_2",
+    "historical_pct_change",
+    "rolling_mean_2",
+    "period_order"
+  ],
+  "features_categorical": [
+    "input_category"
+  ],
+  "deployment_status": "Candidate only (saved separately, existing best_model.joblib preserved unmodified)"
+}

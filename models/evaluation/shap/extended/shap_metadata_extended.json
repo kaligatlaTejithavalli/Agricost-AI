@@ -1,0 +1,101 @@
+{
+  "model_name": "Ridge Regression (alpha=10.0) [Production Candidate Extended]",
+  "model_artifact": "C:/Users/kteji/AgriCost-AI/models/trained/production_candidate_extended.joblib",
+  "model_sha256": "0102c1afe2e044c4e11e26bd37ee7720c97a9cd990792ca651f911e7ba5f3f13",
+  "explainer_type": "shap.LinearExplainer",
+  "masker_type": "shap.maskers.Independent",
+  "feature_dataset": "C:/Users/kteji/AgriCost-AI/data/processed/agricultural_inputs_features_extended.csv",
+  "feature_dataset_sha256": "ed7899b367d46158001aad2902e3943ba2d96f19d5586af3e6ac2326a3f1e6e2",
+  "sample_count": 312,
+  "commodity_count": 26,
+  "first_period": "2014-15",
+  "last_period": "2025-26",
+  "explanation_periods": [
+    "2014-15",
+    "2015-16",
+    "2016-17",
+    "2017-18",
+    "2018-19",
+    "2019-20",
+    "2020-21",
+    "2021-22",
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "num_features_explained": 12,
+  "target_variable": "wpi_index_points",
+  "target_unit": "WPI index points",
+  "base_value_expected": 140.3621,
+  "additivity_verified_all_samples": true,
+  "max_additivity_error": 5.684341886080802e-14,
+  "top_5_features_by_mean_abs_shap": [
+    {
+      "rank": 1,
+      "feature_display": "Prior Year WPI (lag_1)",
+      "mean_abs_shap": 9.0122,
+      "mean_shap": 0.0,
+      "std_shap": 12.8081,
+      "unit": "WPI index points",
+      "feature_raw": "num__lag_1"
+    },
+    {
+      "rank": 2,
+      "feature_display": "2-Year Moving Avg (rolling_mean_2)",
+      "mean_abs_shap": 7.3976,
+      "mean_shap": 0.0,
+      "std_shap": 10.4118,
+      "unit": "WPI index points",
+      "feature_raw": "num__rolling_mean_2"
+    },
+    {
+      "rank": 3,
+      "feature_display": "Two Years Prior WPI (lag_2)",
+      "mean_abs_shap": 5.2391,
+      "mean_shap": -0.0,
+      "std_shap": 7.3978,
+      "unit": "WPI index points",
+      "feature_raw": "num__lag_2"
+    },
+    {
+      "rank": 4,
+      "feature_display": "Prior Year % Change (pct_change)",
+      "mean_abs_shap": 4.8051,
+      "mean_shap": -0.0,
+      "std_shap": 8.0499,
+      "unit": "WPI index points",
+      "feature_raw": "num__historical_pct_change"
+    },
+    {
+      "rank": 5,
+      "feature_display": "Temporal Trend Order (period_order)",
+      "mean_abs_shap": 1.7973,
+      "mean_shap": 0.0,
+      "std_shap": 2.0681,
+      "unit": "WPI index points",
+      "feature_raw": "num__period_order"
+    }
+  ],
+  "local_example_urea_2025_26": {
+    "commodity_code": 1310020001,
+    "commodity_name": "Urea",
+    "period": "2025-26",
+    "actual_wpi": 115.6,
+    "predicted_wpi": 123.48,
+    "base_value": 140.36,
+    "sum_of_shap": -16.88,
+    "reconstructed": 123.48,
+    "absolute_difference": 0.0,
+    "additivity_verified": true,
+    "unit": "WPI index points"
+  },
+  "artifacts_saved": {
+    "global_importance_csv": "C:/Users/kteji/AgriCost-AI/models/evaluation/shap/extended/shap_global_importance.csv",
+    "summary_beeswarm_plot": "C:/Users/kteji/AgriCost-AI/models/evaluation/shap/extended/summary_beeswarm.png",
+    "summary_bar_plot": "C:/Users/kteji/AgriCost-AI/models/evaluation/shap/extended/summary_bar.png",
+    "local_explanation_json": "C:/Users/kteji/AgriCost-AI/models/evaluation/shap/extended/local_explanation_urea_2025_26.json",
+    "waterfall_plot": "C:/Users/kteji/AgriCost-AI/models/evaluation/shap/extended/waterfall_urea_2025_26.png",
+    "assumptions_markdown": "C:/Users/kteji/AgriCost-AI/models/evaluation/shap/extended/shap_assumptions_and_limitations.md"
+  }
+}

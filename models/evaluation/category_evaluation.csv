@@ -1,0 +1,49 @@
+input_category,sample_count,Model,MAE (WPI points),RMSE (WPI points)
+Farm Machinery,18,Naive Persistence (y_t = lag_1),5.99,6.93
+Farm Machinery,18,Drift Baseline (Linear Momentum),3.93,4.94
+Farm Machinery,18,Rolling Mean Baseline (2-Year MA),7.99,9.15
+Farm Machinery,18,Ridge Regression (alpha=10.0),4.6,5.37
+Farm Machinery,18,Random Forest (depth=3),5.77,6.67
+Farm Machinery,18,Gradient Boosting (depth=2),5.08,6.46
+Farm Machinery (Group Index),3,Naive Persistence (y_t = lag_1),5.53,6.45
+Farm Machinery (Group Index),3,Drift Baseline (Linear Momentum),3.5,3.87
+Farm Machinery (Group Index),3,Rolling Mean Baseline (2-Year MA),7.45,8.37
+Farm Machinery (Group Index),3,Ridge Regression (alpha=10.0),4.3,4.79
+Farm Machinery (Group Index),3,Random Forest (depth=3),5.23,6.0
+Farm Machinery (Group Index),3,Gradient Boosting (depth=2),4.39,4.99
+Fertilizer,21,Naive Persistence (y_t = lag_1),9.6,12.32
+Fertilizer,21,Drift Baseline (Linear Momentum),7.63,10.85
+Fertilizer,21,Rolling Mean Baseline (2-Year MA),11.12,14.15
+Fertilizer,21,Ridge Regression (alpha=10.0),9.0,11.95
+Fertilizer,21,Random Forest (depth=3),9.0,11.07
+Fertilizer,21,Gradient Boosting (depth=2),9.55,12.64
+Fertilizer (Group Index),3,Naive Persistence (y_t = lag_1),7.23,9.44
+Fertilizer (Group Index),3,Drift Baseline (Linear Momentum),5.4,6.25
+Fertilizer (Group Index),3,Rolling Mean Baseline (2-Year MA),8.65,11.14
+Fertilizer (Group Index),3,Ridge Regression (alpha=10.0),6.31,8.13
+Fertilizer (Group Index),3,Random Forest (depth=3),3.21,5.33
+Fertilizer (Group Index),3,Gradient Boosting (depth=2),4.56,6.94
+Fuel & Power,9,Naive Persistence (y_t = lag_1),28.81,35.38
+Fuel & Power,9,Drift Baseline (Linear Momentum),21.18,29.77
+Fuel & Power,9,Rolling Mean Baseline (2-Year MA),33.34,42.96
+Fuel & Power,9,Ridge Regression (alpha=10.0),24.37,29.69
+Fuel & Power,9,Random Forest (depth=3),30.72,38.45
+Fuel & Power,9,Gradient Boosting (depth=2),31.78,38.96
+Livestock Input,12,Naive Persistence (y_t = lag_1),22.01,27.45
+Livestock Input,12,Drift Baseline (Linear Momentum),29.24,37.34
+Livestock Input,12,Rolling Mean Baseline (2-Year MA),24.2,28.39
+Livestock Input,12,Ridge Regression (alpha=10.0),21.01,26.22
+Livestock Input,12,Random Forest (depth=3),22.8,28.71
+Livestock Input,12,Gradient Boosting (depth=2),25.26,31.33
+Pesticide / Agrochemical,9,Naive Persistence (y_t = lag_1),22.29,37.84
+Pesticide / Agrochemical,9,Drift Baseline (Linear Momentum),13.4,23.36
+Pesticide / Agrochemical,9,Rolling Mean Baseline (2-Year MA),27.14,46.14
+Pesticide / Agrochemical,9,Ridge Regression (alpha=10.0),22.77,39.99
+Pesticide / Agrochemical,9,Random Forest (depth=3),22.2,43.24
+Pesticide / Agrochemical,9,Gradient Boosting (depth=2),24.91,45.77
+Pesticide / Agrochemical (Group Index),3,Naive Persistence (y_t = lag_1),6.93,7.96
+Pesticide / Agrochemical (Group Index),3,Drift Baseline (Linear Momentum),3.37,4.01
+Pesticide / Agrochemical (Group Index),3,Rolling Mean Baseline (2-Year MA),8.92,10.21
+Pesticide / Agrochemical (Group Index),3,Ridge Regression (alpha=10.0),5.18,6.43
+Pesticide / Agrochemical (Group Index),3,Random Forest (depth=3),4.88,5.39
+Pesticide / Agrochemical (Group Index),3,Gradient Boosting (depth=2),5.28,6.48

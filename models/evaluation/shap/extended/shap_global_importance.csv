@@ -1,0 +1,13 @@
+rank,feature_display,mean_abs_shap,mean_shap,std_shap,unit,feature_raw
+1,Prior Year WPI (lag_1),9.0122,0.0,12.8081,WPI index points,num__lag_1
+2,2-Year Moving Avg (rolling_mean_2),7.3976,0.0,10.4118,WPI index points,num__rolling_mean_2
+3,Two Years Prior WPI (lag_2),5.2391,-0.0,7.3978,WPI index points,num__lag_2
+4,Prior Year % Change (pct_change),4.8051,-0.0,8.0499,WPI index points,num__historical_pct_change
+5,Temporal Trend Order (period_order),1.7973,0.0,2.0681,WPI index points,num__period_order
+6,Category: Livestock Input,1.4572,0.0,2.0194,WPI index points,cat__input_category_Livestock Input
+7,Category: Pesticide / Agrochemical,1.1475,0.0,1.7959,WPI index points,cat__input_category_Pesticide / Agrochemical
+8,Category: Fuel & Power,0.5399,-0.0,0.845,WPI index points,cat__input_category_Fuel & Power
+9,Category: Fertilizer,0.1298,-0.0,0.1463,WPI index points,cat__input_category_Fertilizer
+10,Category: Pesticide / Agrochemical (Group Index),0.0628,-0.0,0.1632,WPI index points,cat__input_category_Pesticide / Agrochemical (Group Index)
+11,Category: Fertilizer (Group Index),0.0312,-0.0,0.081,WPI index points,cat__input_category_Fertilizer (Group Index)
+12,Category: Farm Machinery (Group Index),0.0166,0.0,0.043,WPI index points,cat__input_category_Farm Machinery (Group Index)

@@ -1,0 +1,326 @@
+{
+  "evaluation_phase": "Phase 3C: Recursive Multi-Year Forecast Validation",
+  "historical_cutoff": "2022-23",
+  "cutoff_order": 10,
+  "evaluation_horizons": [
+    1,
+    2,
+    3
+  ],
+  "evaluation_periods": [
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "total_test_observations": 78,
+  "target_variable": "wpi_index_points",
+  "target_unit": "WPI index points",
+  "base_year": "Base Year 2011-12 = 100.0",
+  "leakage_prevention_confirmation": "All candidate evaluation models were fitted strictly on data available at the historical cutoff FY 2022-23 (period_order <= 10, N=234). Lag features for horizons 2 and 3 were constructed strictly from prior step model predictions without access to future observed actuals. The production candidate fitted through FY 2025-26 was NOT used to predict these evaluation periods.",
+  "key_findings": {
+    "naive_persistence_winner": true,
+    "persistence_overall_rmse": 12.5647,
+    "best_ml_model": "Stage 7 Saved Ridge Regression (alpha=10.0)",
+    "best_ml_overall_rmse": 20.2789,
+    "ml_beats_naive_persistence": false,
+    "ml_beats_drift_baseline": true,
+    "drift_overall_rmse": 66.0949,
+    "conclusion": "Na\u00efve Persistence achieved the lowest overall RMSE (12.56 WPI index points) across the 3-year recursive horizon due to an unexpected macroeconomic price plateau in Indian wholesale markets between FY 2022-23 and FY 2025-26. Machine Learning models did NOT beat Na\u00efve Persistence in recursive multi-year point forecasting. However, ML regularized models decisively beat the Drift baseline (RMSE 66.09 pts), preventing runaway linear divergence."
+  },
+  "model_evaluations": {
+    "Na\u00efve Persistence Baseline": {
+      "model_name": "Na\u00efve Persistence Baseline",
+      "overall": {
+        "mae": 8.9629,
+        "rmse": 12.5647,
+        "mape": 5.5361,
+        "directional_accuracy_pct": 0.0
+      },
+      "horizons": {
+        "1": {
+          "forecast_period": "2023-24",
+          "observations": 26,
+          "mae": 8.0885,
+          "rmse": 11.6491,
+          "mape": 4.8301,
+          "directional_accuracy_pct": 0.0
+        },
+        "2": {
+          "forecast_period": "2024-25",
+          "observations": 26,
+          "mae": 8.7269,
+          "rmse": 12.3596,
+          "mape": 5.4313,
+          "directional_accuracy_pct": 0.0
+        },
+        "3": {
+          "forecast_period": "2025-26",
+          "observations": 26,
+          "mae": 10.0735,
+          "rmse": 13.607,
+          "mape": 6.347,
+          "directional_accuracy_pct": 0.0
+        }
+      },
+      "model_type": "Baseline"
+    },
+    "Rolling Mean Baseline (2-Year MA)": {
+      "model_name": "Rolling Mean Baseline (2-Year MA)",
+      "overall": {
+        "mae": 11.1782,
+        "rmse": 17.3789,
+        "mape": 6.3112,
+        "directional_accuracy_pct": 48.72
+      },
+      "horizons": {
+        "1": {
+          "forecast_period": "2023-24",
+          "observations": 26,
+          "mae": 12.2558,
+          "rmse": 19.9553,
+          "mape": 6.59,
+          "directional_accuracy_pct": 50.0
+        },
+        "2": {
+          "forecast_period": "2024-25",
+          "observations": 26,
+          "mae": 9.424,
+          "rmse": 14.5384,
+          "mape": 5.5138,
+          "directional_accuracy_pct": 50.0
+        },
+        "3": {
+          "forecast_period": "2025-26",
+          "observations": 26,
+          "mae": 11.8547,
+          "rmse": 17.2193,
+          "mape": 6.8299,
+          "directional_accuracy_pct": 46.15
+        }
+      },
+      "model_type": "Baseline"
+    },
+    "Stage 7 Saved Ridge Regression (alpha=10.0)": {
+      "model_name": "Stage 7 Saved Ridge Regression (alpha=10.0)",
+      "overall": {
+        "mae": 12.5292,
+        "rmse": 20.2789,
+        "mape": 7.3031,
+        "directional_accuracy_pct": 57.69
+      },
+      "horizons": {
+        "1": {
+          "forecast_period": "2023-24",
+          "observations": 26,
+          "mae": 10.1173,
+          "rmse": 16.5891,
+          "mape": 5.788,
+          "directional_accuracy_pct": 50.0
+        },
+        "2": {
+          "forecast_period": "2024-25",
+          "observations": 26,
+          "mae": 12.0869,
+          "rmse": 19.8411,
+          "mape": 7.1465,
+          "directional_accuracy_pct": 57.69
+        },
+        "3": {
+          "forecast_period": "2025-26",
+          "observations": 26,
+          "mae": 15.3835,
+          "rmse": 23.7663,
+          "mape": 8.9747,
+          "directional_accuracy_pct": 65.38
+        }
+      },
+      "model_type": "Machine Learning"
+    },
+    "Retrospective Ridge Regression (alpha=1.0)": {
+      "model_name": "Retrospective Ridge Regression (alpha=1.0)",
+      "overall": {
+        "mae": 25.3553,
+        "rmse": 29.7967,
+        "mape": 16.962,
+        "directional_accuracy_pct": 47.44
+      },
+      "horizons": {
+        "1": {
+          "forecast_period": "2023-24",
+          "observations": 26,
+          "mae": 15.6426,
+          "rmse": 19.5573,
+          "mape": 10.1801,
+          "directional_accuracy_pct": 46.15
+        },
+        "2": {
+          "forecast_period": "2024-25",
+          "observations": 26,
+          "mae": 25.9796,
+          "rmse": 29.1745,
+          "mape": 17.3507,
+          "directional_accuracy_pct": 46.15
+        },
+        "3": {
+          "forecast_period": "2025-26",
+          "observations": 26,
+          "mae": 34.4438,
+          "rmse": 37.8139,
+          "mape": 23.3553,
+          "directional_accuracy_pct": 50.0
+        }
+      },
+      "model_type": "Machine Learning"
+    },
+    "Retrospective Ridge Regression (alpha=10.0)": {
+      "model_name": "Retrospective Ridge Regression (alpha=10.0)",
+      "overall": {
+        "mae": 26.465,
+        "rmse": 30.4549,
+        "mape": 17.7572,
+        "directional_accuracy_pct": 47.44
+      },
+      "horizons": {
+        "1": {
+          "forecast_period": "2023-24",
+          "observations": 26,
+          "mae": 15.843,
+          "rmse": 19.3486,
+          "mape": 10.35,
+          "directional_accuracy_pct": 46.15
+        },
+        "2": {
+          "forecast_period": "2024-25",
+          "observations": 26,
+          "mae": 26.9825,
+          "rmse": 29.4718,
+          "mape": 18.0653,
+          "directional_accuracy_pct": 46.15
+        },
+        "3": {
+          "forecast_period": "2025-26",
+          "observations": 26,
+          "mae": 36.5695,
+          "rmse": 39.2371,
+          "mape": 24.8565,
+          "directional_accuracy_pct": 50.0
+        }
+      },
+      "model_type": "Machine Learning"
+    },
+    "Random Forest Regressor (depth=3)": {
+      "model_name": "Random Forest Regressor (depth=3)",
+      "overall": {
+        "mae": 22.1004,
+        "rmse": 33.0036,
+        "mape": 13.0656,
+        "directional_accuracy_pct": 48.72
+      },
+      "horizons": {
+        "1": {
+          "forecast_period": "2023-24",
+          "observations": 26,
+          "mae": 14.4834,
+          "rmse": 26.8647,
+          "mape": 7.9264,
+          "directional_accuracy_pct": 42.31
+        },
+        "2": {
+          "forecast_period": "2024-25",
+          "observations": 26,
+          "mae": 22.3607,
+          "rmse": 32.4449,
+          "mape": 13.1678,
+          "directional_accuracy_pct": 50.0
+        },
+        "3": {
+          "forecast_period": "2025-26",
+          "observations": 26,
+          "mae": 29.4571,
+          "rmse": 38.6436,
+          "mape": 18.1027,
+          "directional_accuracy_pct": 53.85
+        }
+      },
+      "model_type": "Machine Learning"
+    },
+    "Gradient Boosting Regressor (depth=2)": {
+      "model_name": "Gradient Boosting Regressor (depth=2)",
+      "overall": {
+        "mae": 23.327,
+        "rmse": 33.4645,
+        "mape": 14.1865,
+        "directional_accuracy_pct": 47.44
+      },
+      "horizons": {
+        "1": {
+          "forecast_period": "2023-24",
+          "observations": 26,
+          "mae": 15.9582,
+          "rmse": 25.382,
+          "mape": 9.1552,
+          "directional_accuracy_pct": 38.46
+        },
+        "2": {
+          "forecast_period": "2024-25",
+          "observations": 26,
+          "mae": 24.0645,
+          "rmse": 34.7495,
+          "mape": 14.4479,
+          "directional_accuracy_pct": 50.0
+        },
+        "3": {
+          "forecast_period": "2025-26",
+          "observations": 26,
+          "mae": 29.9584,
+          "rmse": 38.8309,
+          "mape": 18.9564,
+          "directional_accuracy_pct": 53.85
+        }
+      },
+      "model_type": "Machine Learning"
+    },
+    "Drift Baseline (Linear Momentum)": {
+      "model_name": "Drift Baseline (Linear Momentum)",
+      "overall": {
+        "mae": 44.1412,
+        "rmse": 66.0949,
+        "mape": 25.7318,
+        "directional_accuracy_pct": 51.28
+      },
+      "horizons": {
+        "1": {
+          "forecast_period": "2023-24",
+          "observations": 26,
+          "mae": 23.1154,
+          "rmse": 31.0011,
+          "mape": 13.6479,
+          "directional_accuracy_pct": 50.0
+        },
+        "2": {
+          "forecast_period": "2024-25",
+          "observations": 26,
+          "mae": 44.1346,
+          "rmse": 61.1155,
+          "mape": 25.703,
+          "directional_accuracy_pct": 50.0
+        },
+        "3": {
+          "forecast_period": "2025-26",
+          "observations": 26,
+          "mae": 65.1735,
+          "rmse": 91.703,
+          "mape": 37.8446,
+          "directional_accuracy_pct": 53.85
+        }
+      },
+      "model_type": "Baseline"
+    }
+  },
+  "artifacts_saved": {
+    "model_comparison_csv": "C:\\Users\\kteji\\AgriCost-AI\\models\\evaluation\\phase_3c\\recursive_model_comparison.csv",
+    "horizon_performance_csv": "C:\\Users\\kteji\\AgriCost-AI\\models\\evaluation\\phase_3c\\horizon_wise_performance.csv",
+    "category_performance_csv": "C:\\Users\\kteji\\AgriCost-AI\\models\\evaluation\\phase_3c\\category_recursive_performance.csv",
+    "predictions_matched_csv": "C:\\Users\\kteji\\AgriCost-AI\\models\\evaluation\\phase_3c\\recursive_predictions_matched.csv"
+  }
+}
