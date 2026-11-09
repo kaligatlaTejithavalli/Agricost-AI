@@ -254,6 +254,15 @@ streamlit run app.py
 Open your browser to `http://localhost:8501` to access the interactive dashboard.
 
 ---
+### 7.5 Accessing the Live Application
+
+AgriCost-AI is deployed and publicly accessible through Streamlit Community Cloud.
+
+**Live Application:** [Open AgriCost-AI](https://agricost-ai-5l6myfzgtlgbpprew9uegz.streamlit.app/)
+
+Users can explore historical agricultural input price trends, generate future WPI forecasts, estimate farming budgets, and understand model predictions through SHAP-based explanations.
+
+**Note:** The application may take a few moments to load if it has been inactive.
 
 ## 8. Comprehensive Academic Viva & Defense Guide
 
